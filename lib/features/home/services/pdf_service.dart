@@ -42,8 +42,8 @@ class PdfService {
 
                 // Billed To Text
                 pw.Positioned(
-                  left: 200, // Approximate X
-                  top: 265, // Approximate Y
+                  left: 150, // Approximate X
+                  top: 260, // Approximate Y
                   child: pw.Text(
                     billData.billedTo,
                     style: pw.TextStyle(font: kingredFont, fontSize: 16),
@@ -52,8 +52,8 @@ class PdfService {
 
                 // Date Text
                 pw.Positioned(
-                  left: 200,
-                  top: 298,
+                  left: 150,
+                  top: 295,
                   child: pw.Text(
                     billData.formattedDate,
                     style: pw.TextStyle(font: kingredFont, fontSize: 16),
@@ -62,7 +62,7 @@ class PdfService {
 
                 // Services Table Implementation
                 pw.Positioned(
-                  left: 70,
+                  // left: 15,
                   top: 410,
                   child: pw.Column(
                     crossAxisAlignment: pw.CrossAxisAlignment.start,
@@ -74,7 +74,7 @@ class PdfService {
                           children: [
                             // S.No
                             pw.SizedBox(
-                              width: 60,
+                              width: 140,
                               child: pw.Text(
                                 (index + 1).toString().padLeft(2, '0'),
                                 style: pw.TextStyle(font: kingredFont, fontSize: 16),
@@ -83,7 +83,7 @@ class PdfService {
                             ),
                             // Service
                             pw.SizedBox(
-                              width: 250,
+                              width: 120,
                               child: pw.Text(
                                 item.service,
                                 style: pw.TextStyle(font: kingredFont, fontSize: 16),
@@ -116,8 +116,8 @@ class PdfService {
 
                 // Total Amount
                 pw.Positioned(
-                  right: 125,
-                  bottom: 215, // Adjusted based on template layout
+                  right: 100,
+                  bottom: 200, // Adjusted based on template layout
                   child: pw.Text(
                     billData.formattedTotal,
                     style: pw.TextStyle(

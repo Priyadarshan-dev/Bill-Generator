@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import '../models/bill_data.dart';
-import '../services/pdf_service.dart';
+import 'package:rrr_bill_generator/features/home/services/pdf_service.dart';
+import '../features/home/models/bill_data.dart';
+
 import 'package:intl/intl.dart';
 
 class HomeScreen extends StatefulWidget {
